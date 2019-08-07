@@ -33,10 +33,39 @@ const siteContent = {
     "email" : "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright" : "Copyright Great Idea! 2019"
   },
 };
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//CTA
+let ctaH1 = document.querySelector('.cta-text h1')
+ctaH1.textContent = siteContent['cta']['h1']
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let ctaBtn = document.querySelector('.cta-text button')
+ctaBtn.textContent = siteContent['cta']['button']
+// END CTA
+
+// let ctaImg = document.getElementById("cta-img");
+// ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let navBar = document.querySelectorAll('nav a')
+
+
+
+
+const contactH4 = document.querySelector('.contact h4')
+contactH4.textContent = siteContent['contact']['contact-h4'];
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].innerHTML = siteContent.contact.address;
+contactInfo[1].textContent = siteContent.contact.phone;
+contactInfo[2].textContent = siteContent.contact.email;
+
+const footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer.copyright;
